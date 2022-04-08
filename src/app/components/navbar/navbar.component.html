@@ -4,34 +4,108 @@
 </nav>
 
 
-  <nav class="navbar navbar-expand-lg navbar-light bg-dark">
-    <a class="navbar-brand" href="/">Navbar</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
+  <nav class="navbar navbar-expand-lg bg-dark " style="color: WHITE;">
+   
+    <button class="navbar-toggler" style="color:white;" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon" ></span>
     </button>
   
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto">
+    <div class="collapse navbar-collapse text-center " id="navbarSupportedContent">
+      <ul class="navbar-nav mx-auto ">
         <li class="nav-item active">
             <button routerLink='Home' mat-button class="menu-button">      
                 <span>Home</span>
             </button>
         </li>
         <li class="nav-item">
-            <button routerLink='customers' mat-button class="menu-button">      
-                <span>Coustomer details</span>
+            <button routerLink='school' mat-button class="menu-button">      
+                <span>SCHOOL</span>
             </button>
         </li>
-        <li class="nav-item dropdown">
-            <button routerLink='products' mat-button class="menu-button">      
-                <span>Product List</span>
+        <li class="nav-item ">
+            <button routerLink='college' mat-button class="menu-button">      
+                <span>COLLEGE</span>
             </button>
         </li>
+        <li class="nav-item ">
+            <button routerLink='enterprise' mat-button class="menu-button">      
+                <span>ENTERPRISE</span>
+            </button>
+        </li>
+        <li class="nav-item ">
+            <button routerLink='notes' mat-button class="menu-button">      
+                <span>NOTES</span>
+            </button>
+        </li>
+        <li class="nav-item ">
+            <button routerLink='airenMask' mat-button class="menu-button">      
+                <span>AIREN MASK</span>
+            </button>
+        </li>
+      
        
       </ul>
-      <form class="form-inline my-2 my-lg-0">
-        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-      </form>
+      <ul class=" navbar-nav my-2 my-lg-0">
+        <li class="nav-item">
+            <a class="menu-button "  mat-button style="font-size:24px;color:white" type="button"
+             data-toggle="collapse" data-target="#collapseExample1" 
+             aria-controls="collapseExample1" aria-expanded="false" >
+                <span class="fa fa-gear" ></span>
+        </a>
+        </li>
+        <li class="nav-item ">
+          <button routerLink='airenMask' mat-button class="menu-button">      
+            <span class= "fa fa-cart-plus" style="font-size:24px;color:white"></span>
+          </button>
+          
+        </li>
+      </ul>
+  
+    
     </div>
+  
   </nav>
+  <nav class=" navbar navbar-expand-sm " >
+    <ul id="collapseExample1"
+    class=" ml-auto collapse " style="background-color:black;color:argb(74, 104, 104)">
+    
+    
+  <li class="nav-item">
+    <button routerLink='login' mat-button class="menu-button">      
+        <span>Sign In</span>
+        <span class="line"></span>
+        <span class='fa fa-solid fa-sign-in'style="font-size:14px;color:white"></span>
+    </button>
+  </li>
+  
+  <li class="nav-item">
+    <button routerLink='register' mat-button class="menu-button">      
+        <span>Register</span>
+        <span class="line"></span>
+        <span class='fa fa-solid fa-registered'style="font-size:14px;color:white"></span>
+    </button>
+  </li>
+  
+  <li class="nav-item">
+    <button routerLink='orderStatus' mat-button class="menu-button">      
+        <span>Order Status</span>
+        <span class="line"></span>
+        <span class='fa fa-solid fa-calendar'style="font-size:14px;color:white"></span>
+    </button>
+  </li>
+  
+  <li class="nav-item" style="text-decoration: none;">
+    <button routerLink='contact' mat-button class="menu-button">      
+        <span >Contact</span>
+        <span class="line"></span>
+        <span class='fa fa-solid fa-address-book'style="font-size:14px;color:white"></span>
+        
+    </button>
+  </li>
+  
+   
+  </ul>
+</nav>
+ 
+ 
+  

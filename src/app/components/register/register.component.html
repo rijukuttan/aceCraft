@@ -1,0 +1,41 @@
+<div class="mt-5">
+    <div class="col-md-12 min-vh-100 d-flex flex-column">
+      <div class="row">
+          <div class="col-lg-6 col-md-8 mx-auto">
+                <div class="wrapper ms-mt-35x ms-mb-35x ms-pt-x ms-pb-x">
+                    <div class="login-form">
+                        <form class="mt-5" name="registerForm" #signupForm = "ngForm" [formGroup]="registerForm" (ngSubmit)="submitHandler()">
+                            <h2 class="text-center secondary ms-mb-m main-heading ng-binding">Login with Acecraft</h2>
+                            <div class="form-group">
+                                <input type="text" name="Studentfirstname" class="form-control" formControlName="Studentfirstname" placeholder="Student First Name">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" name="studentlastname" class="form-control" formControlName="studentlastname" placeholder="Student Last Name">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" name="email" class="form-control" formControlName="email" placeholder="Email">
+                            </div>
+                            <div class="form-group">
+                                <input type="password" name="password" class="form-control" formControlName="password" placeholder="Password">
+                            </div>
+                            <div class="form-group">
+                                <input type="password" name="confirmpassword" class="form-control" formControlName="confirmpassword" placeholder="Confirm Password">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" name="parentname" class="form-control" formControlName="parentname" placeholder="Parent Name">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" name="admissionnumber" class="form-control" formControlName="admissionnumber" placeholder="Admission Number">
+                            </div>
+                           
+                            <button type="submit" class="btn btn-primary btn-block btn-lg" value="Register">Register</button>
+                            <div class="text-center ms-mt-x ms-mb-m register-already-account" style="padding-top:30px">
+                                <span class="ms-fs-12 ng-binding">Already have an account?
+                                    <a class="secondary ng-binding" href="/user/login">
+                                        Login!
+                                    </a>
+                                </span>
+                            </div>
+                        </form>
+                    </div>
+                    </div>
