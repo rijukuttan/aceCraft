@@ -7,12 +7,17 @@
                                 <h2 class="text-center secondary ms-mb-m main-heading ng-binding">Login with Acecraft</h2>
                                 <div class="mt-5">
                                 <div class="form-group">
-                                    <input type="text" class="form-control" name="email" formControlName="email" placeholder="email">
+                                    <input type="text" class="form-control" name="email" formControlName="email" placeholder="Username">
+                                    <label class="error ng-binding" *ngIf="submitted && f['email'].errors?.['required']">Email is required</label>
+                                    <label class="error ng-binding" *ngIf="submitted && f['email'].errors?.['email']">Email must be a valid email address</label>
                                 </div>
                                 <div class="form-group">
                                     <input type="password" class="form-control" name="password" formControlName="password" placeholder="Password">
+                                    <label class="error ng-binding" *ngIf="submitted && f['password'].errors?.['required']">Password is required</label>
+                                    <label class="error ng-binding" *ngIf="submitted && f['password'].errors?.['minlength']">Password must be at least 6 characters</label>
                                 </div>
-                                <input type="submit" class="btn btn-primary btn-block btn-lg" value="Login">
+                                <button type="submit" class="btn btn-dark">Login</button>
+                                
                                 <div class="ms-fs-12 text-center ms-mt-x ms-mb-m forgot">
                                     <p style="padding-top:30px">
                                         <a href="/forgotten" class="secondary ng-binding" target="_blank">
@@ -28,3 +33,4 @@
              </div>
         </div>
     </div>
+ 
