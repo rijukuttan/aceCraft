@@ -1,0 +1,84 @@
+#box-with-image {
+
+    display: block;
+    background-image:url('https://cdn.storehippo.com/s/5997cc7c4d6e8ffa20e50aae/ms.files/MJK07160_new.jpg');
+    background-size:cover;
+    background-repeat:no-repeat;
+    height: 120%;
+  }
+  
+  .banner .container {
+    position: absolute;
+    bottom: 0;
+    left: calc((100vw - 1170px)/2);
+  }
+  
+  .helpBox {
+    text-align: center;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid white;
+  }
+  
+  #h3textthin{
+    font-family: "proxima-thin";
+    font-weight: lighter;
+    color: #978f8f;
+    font-size: 24px;
+  }
+  
+  #h3textbold{
+    font-family: "proxima-bold";
+    font-weight: bolder;
+    color: #978f8f;
+    font-size: 24px;
+  }
+  #btnContainer{
+    margin-top: 460px;
+      position: absolute;
+      margin-left: 150px;
+      width: 80%;
+  }
+  #btnh1{
+    font-family: "ubuntu";
+  
+  }
+  
+  .helpBox {
+    text-align: center;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid white;
+    color: white;
+    text-decoration:none;
+  
+  }
+  helpBox h5 {
+    font-family: proxima-Bold;
+    font-size: 20px;
+  
+  }
+  .phone {
+    display: inline-block;
+    height: 50px;
+    width: 50px;
+    background-image: url(http://cdn.storehippo.com/s/5997cc7c4d6e8ffa20e50aae/ms.files/care-icon-12.png);
+    vertical-align: middle;
+    background-size: 180%;
+    background-position: center;
+  }
+  
+  .mail{
+    display: inline-block;
+    height: 50px;
+    width: 50px;
+    background-image: url(http://cdn.storehippo.com/s/5997cc7c4d6e8ffa20e50aae/ms.files/care-icon-13.png);
+    vertical-align: middle;
+    background-size: 180%;
+    background-position: center;
+  }
+  

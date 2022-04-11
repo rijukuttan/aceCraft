@@ -1,3 +1,5 @@
+.container-fluid { margin: 0;font-family: proxima;background-color: black; }
+
 div #school{
     background-image: url("http://cdn.storehippo.com/s/5997cc7c4d6e8ffa20e50aae/ms.files/Home-1.jpg");
     
@@ -6,6 +8,8 @@ div #school{
     background-repeat: no-repeat;
     
 }
+
+
 /*
  div #college{
     background-image: url("http://cdn.storehippo.com/s/5997cc7c4d6e8ffa20e50aae/ms.files/home3.jpg");
@@ -29,11 +33,13 @@ div #enterprises{
     
 }*/
 /*school*/
-div .enterprises{
+div #enterprises{
     height: 800px;
+    overflow: hidden;
 }
-div .college{
+div #college{
     height: 800px;
+    overflow: hidden;
 }
 img {
     width: 100%;
@@ -70,4 +76,22 @@ font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;}
     color: white;
     
    
+}
+
+/*image hover */
+figure{
+    overflow: hidden;
+}
+.imgHover figure img {
+   
+
+	-webkit-transform: scale(1);
+	transform: scale(1);
+	-webkit-transition: .5s ease-in-out;
+	transition: .5s ease-in-out;
+}
+.imgHover figure:hover img {
+   
+    -webkit-transform: scale(1.1);
+	transform: scale(1.1);
 }

@@ -13,6 +13,15 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { FooterComponent } from './components/footer/footer.component';
+import { ContactComponent } from './components/contact/contact.component';
+import { ProductsComponent } from './components/products/products.component';
+import { SingleProductComponent } from './components/products/single-product/single-product.component';
+import { ViewProductComponent } from './components/products/view-product/view-product.component';
+import { SortPipe } from './Pipes/sort.pipe';
+import { AccountsOrdersComponent } from './components/contact/Help/accounts-orders/accounts-orders.component';
+import { OthersComponent } from './components/contact/Help/others/others.component';
+import { PaymentComponent } from './components/contact/Help/payment/payment.component';
+import { ShippingComponent } from './components/contact/Help/shipping/shipping.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +30,16 @@ import { FooterComponent } from './components/footer/footer.component';
     NavbarComponent,
     LoginComponent,
     RegisterComponent,
-    FooterComponent
+    FooterComponent,
+    ContactComponent,
+    ProductsComponent,
+    SingleProductComponent,
+    ViewProductComponent,
+    SortPipe,
+    AccountsOrdersComponent,
+    OthersComponent,
+    PaymentComponent,
+    ShippingComponent
   ],
   imports: [
     BrowserModule,
@@ -32,6 +50,8 @@ import { FooterComponent } from './components/footer/footer.component';
     ReactiveFormsModule,
     FormsModule,
     HttpClientModule
+   
+   
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -11,16 +11,13 @@ import { Router } from '@angular/router';
 export class RegisterComponent implements OnInit {
   //public registerForm!:FormGroup;
   registerForm= new FormGroup({
-
     Studentfirstname:new FormControl(''),
     studentlastname:new FormControl(''),
     email:new FormControl(''),
     password:new FormControl(''),
     confirmpassword:new FormControl(''),
     parentname:new FormControl(''),
-    admissionnumber:new FormControl('')
-   
-    
+    admissionnumber:new FormControl('') 
   })
 
 

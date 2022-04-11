@@ -1,0 +1,12 @@
+<!--
+<div class="row">
+    <ng-container *ngFor="let item of products">
+      <div class="card col-4" >
+        <img class="card-img" src="{{item.imgSrc}}" (click)="viewProduct(item.id)">
+        <h6 class="card-title">{{item.title}}</h6>
+      </div>
+    </ng-container>
+  </div>
+ -->
+ <img class="card-img" src="{{products.imgSrc}}" (click)="viewProduct(products.id)">
+ <h6 class="card-title">{{products.title}}</h6>
