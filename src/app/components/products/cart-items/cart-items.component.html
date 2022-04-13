@@ -1,0 +1,20 @@
+
+<div class="container-fluid" *ngFor="let item of cart">
+    <hr>
+    <div class="row">
+        <div class="col-sm">
+          <img src={{item.imgSrc}}>
+        </div>
+        <div class="col-sm">
+        <h3> {{item.title}}</h3>
+        <h6>{{item.size}}</h6>
+        </div>
+        <div class="col-sm">
+          One of three columns
+        </div>
+        <div class="col-sm">
+            <button class="btn btn-dark m-3" (click)="delete(item)">delete</button>
+          </div>
+      </div>
+    <hr>
+</div>

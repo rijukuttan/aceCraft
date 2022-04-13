@@ -10,8 +10,10 @@ import { OthersComponent } from './components/contact/Help/others/others.compone
 import { PaymentComponent } from './components/contact/Help/payment/payment.component';
 import { ShippingComponent } from './components/contact/Help/shipping/shipping.component';
 import { ViewProductComponent } from './components/products/view-product/view-product.component';
+import { CartItemsComponent } from './components/products/cart-items/cart-items.component';
 const routes: Routes = [
   {path:'',redirectTo:'./Home',pathMatch:'full'},
+  {path:'',component:HomeComponent},
   {path:'Home',component:HomeComponent},
   {path:'login',component:LoginComponent},
   {path:'register',component:RegisterComponent},
@@ -21,7 +23,8 @@ const routes: Routes = [
   {path:'others',component:OthersComponent},
   {path:'payment',component:PaymentComponent},
   {path:'shipping',component:ShippingComponent},
-  {path:"viewProduct/:id",component:ViewProductComponent}
+  {path:"viewProduct/:id",component:ViewProductComponent},
+  {path:"cartItem",component:CartItemsComponent}
 
   
 ];

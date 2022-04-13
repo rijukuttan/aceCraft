@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ProductsService } from 'src/app/services/products.service';
@@ -9,7 +10,8 @@ import { ProductsService } from 'src/app/services/products.service';
 })
 export class SingleProductComponent implements OnInit {
   @Input() products:any;
-  constructor(private productService:ProductsService,
+
+  constructor(private productService:ProductsService,private http:HttpClient,
               private router:Router) { }
 
   ngOnInit() {
@@ -19,6 +21,7 @@ export class SingleProductComponent implements OnInit {
   viewProduct(id:number){
     this.productId = id;
     this.router.navigate(['viewProduct/'+id])
+  //return  this.http.get(`http://localhost:3000/viewproduct/${id}`)
   }
 
 }

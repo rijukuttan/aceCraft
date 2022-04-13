@@ -22,6 +22,7 @@ import { AccountsOrdersComponent } from './components/contact/Help/accounts-orde
 import { OthersComponent } from './components/contact/Help/others/others.component';
 import { PaymentComponent } from './components/contact/Help/payment/payment.component';
 import { ShippingComponent } from './components/contact/Help/shipping/shipping.component';
+import { CartItemsComponent } from './components/products/cart-items/cart-items.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { ShippingComponent } from './components/contact/Help/shipping/shipping.c
     AccountsOrdersComponent,
     OthersComponent,
     PaymentComponent,
-    ShippingComponent
+    ShippingComponent,
+    CartItemsComponent
   ],
   imports: [
     BrowserModule,
