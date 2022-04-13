@@ -59,6 +59,16 @@
       "parentname": "mini",
       "admissionnumber": "7",
       "id": 4
+    },
+    {
+      "Studentfirstname": "anu",
+      "studentlastname": "C",
+      "email": "anu@gmail.com",
+      "password": "anu@123",
+      "confirmpassword": "anu@123",
+      "parentname": "mini",
+      "admissionnumber": "8",
+      "id": 5
     }
   ],
   "Products": [
