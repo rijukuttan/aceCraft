@@ -11,28 +11,28 @@
     </button>
   
     <div class="collapse navbar-collapse text-center " id="navbarSupportedContent">
-      <ul class="navbar-nav mx-auto ">
+      <ul class="navbar-nav mx-auto " >
         <li class="nav-item active">
             <button routerLink='Home' mat-button class="menu-button">      
                 <span>Home</span>
             </button>
         </li>
-        <li class="nav-item">
+        <li class="nav-item" *ngIf="auth">
             <button routerLink='school' mat-button class="menu-button">      
                 <span>SCHOOL</span>
             </button>
         </li>
-        <li class="nav-item ">
+        <li class="nav-item " *ngIf="auth">
             <button routerLink='college' mat-button class="menu-button">      
                 <span>COLLEGE</span>
             </button>
         </li>
-        <li class="nav-item ">
+        <li class="nav-item " *ngIf="auth">
             <button routerLink='enterprise' mat-button class="menu-button">      
                 <span>ENTERPRISE</span>
             </button>
         </li>
-        <li class="nav-item ">
+        <li class="nav-item " *ngIf="auth">
             <button routerLink='notes' mat-button class="menu-button">      
                 <span>NOTES</span>
             </button>
@@ -59,6 +59,12 @@
           </button>
           
         </li>
+        <li class="nav-item " *ngIf="auth">
+          <button routerLink='login' mat-button class="menu-button">      
+            <span>LOGOUT</span>
+          </button>
+          
+        </li>
       </ul>
   
     
@@ -70,7 +76,7 @@
     class=" ml-auto collapse " style="background-color:black;color:argb(74, 104, 104);color: aliceblue;">
     
     
-  <li class="nav-item">
+  <li class="nav-item" *ngIf="!auth">
     <button routerLink='login' mat-button class="menu-button">      
         <span>Sign In</span>
         <span class="line"></span>
@@ -78,7 +84,7 @@
     </button>
   </li>
   
-  <li class="nav-item">
+  <li class="nav-item" *ngIf="!auth">
     <button routerLink='register' mat-button class="menu-button">      
         <span>Register</span>
         <span class="line"></span>
@@ -86,7 +92,7 @@
     </button>
   </li>
   
-  <li class="nav-item">
+  <li class="nav-item" *ngIf="!auth">
     <button routerLink='orderStatus' mat-button class="menu-button">      
         <span>Order Status</span>
         <span class="line"></span>
@@ -102,6 +108,7 @@
         
     </button>
   </li>
+
   
    
   </ul>

@@ -23,6 +23,8 @@ import { OthersComponent } from './components/contact/Help/others/others.compone
 import { PaymentComponent } from './components/contact/Help/payment/payment.component';
 import { ShippingComponent } from './components/contact/Help/shipping/shipping.component';
 import { CartItemsComponent } from './components/products/cart-items/cart-items.component';
+import { CounterComponent } from './components/products/counter/counter.component';
+import { CounterchildComponent } from './components/products/counter/counterchild/counterchild.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +43,9 @@ import { CartItemsComponent } from './components/products/cart-items/cart-items.
     OthersComponent,
     PaymentComponent,
     ShippingComponent,
-    CartItemsComponent
+    CartItemsComponent,
+    CounterComponent,
+    CounterchildComponent
   ],
   imports: [
     BrowserModule,

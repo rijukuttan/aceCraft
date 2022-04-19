@@ -1,4 +1,4 @@
-<div class="container-fluid" *ngFor="let item of productData">
+<div class="container-fluid" *ngFor="let item of productDatas">
     <div class="container">
       <div class="row row1">
         <div class="col-6">
@@ -33,7 +33,7 @@
                   <span class="size">Size:&emsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
                 </label>
   
-                  <select class="dropdown">
+                  <select class="dropdown" [(ngModel)]="sizes">
                     <option value="0">Please Select</option>
                     <option *ngFor="let s of item.size" value={{s}}>
                       {{s}}
@@ -47,7 +47,7 @@
                     <span class="size">Length:&emsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
                   </label>
   
-                  <select class="dropdown">
+                  <select class="dropdown" [(ngModel)]="sizes">
                     <option value="0">Please Select</option>
                     <option *ngFor="let s of item.length" value={{s}}>
                       {{s}}
@@ -59,13 +59,13 @@
                 <label class="option-name" style="position:relative;top:0px !important">
                   <span class="size">Waist:&emsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
                 </label>
-  
-                  <select class="dropdown">
-                    <option value="0">Please Select</option>
-                    <option *ngFor="let s of item.size" value={{s}}>
-                      {{s}}
-                    </option>
-                  </select>
+                <select class="dropdown" [(ngModel)]="sizes" name="size">
+                  <option value="0">Please Select</option>
+                  <option *ngFor="let size of item.size" value={{size}} name="sizes">
+                    
+                  </option>
+                </select>
+             
   
               </div>
               <hr>
@@ -73,7 +73,7 @@
                 <label class="option-name" style="position:relative;top:0px !important">
                   <span class="size">Quantity:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
                 </label>
-                <input type="number" class="quantity">
+                <input type="number" [(ngModel)]="quantity" name="quantity" class="quantity">
   
               </div>
               <br>

@@ -8,5 +8,8 @@
     </ng-container>
   </div>
  -->
- <img class="card-img" src="{{products.imgSrc}}" (click)="viewProduct(products.id)">
+<!-- <img class="card-img" src="{{products.imgSrc}}" (click)="viewProduct(products.id)">-->
+<a [routerLink]="['/viewProduct',products.id]">
+  <img class="card-img" src="{{products.imgSrc}}" >
+</a>
  <h6 class="card-title">{{products.title}}</h6>

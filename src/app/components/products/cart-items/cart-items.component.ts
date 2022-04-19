@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { CartItem } from 'src/app/models/cartItem';
+import { Products } from 'src/app/models/products';
 import { CartService } from 'src/app/services/cart.service';
 
 @Component({
@@ -9,23 +10,84 @@ import { CartService } from 'src/app/services/cart.service';
   styleUrls: ['./cart-items.component.css']
 })
 export class CartItemsComponent implements OnInit {
+  quanties:number=0;
 
-  constructor(private cartSvc:CartService,private http: HttpClient) { }
+  constructor(private cartSvc:CartService,private http: HttpClient,private cartsvc:CartService) { }
   //cartList:any[] =[];
   carts:CartItem={
+    id:0,
     title: '',
     productCode: '',
     brand: '',
     soldBy: '',
+    totalPrice:1,
     price: 0,
     originalPrice: 0,
     offerPercent: 0,
+    quantity:0,
    // gender: '',
-    size: [],
+    size: 0,
     description: [],
     imgSrc: ''
   }
+ // quanties:number=0;
+cartData:any=[];
+total:number=0;
+quantity =1;  
+//@Input() count?:number;
+ 
+ receivequantity($event: number) {  
+ this.quantity = $event;  
+ } 
+totalPrices(data:any) {
+  debugger  
+      this.total=0;
+     this.cartData=data    
+      console.log(this.cartData);  
+     for(let j=0;j<data.length;j++){   
+     this.total+= (this.cartData[j].price +this.cartData[j].quantity )
+           console.log(this.cartData[j].quantity)  
+      }  
+      return this.total;
+}
+totalPrice(data:any) {
+  debugger  
+  const intialValue = 0; 
+  
+     this.cartData=data    
+     const a= this.cartData.reduce((sum:any, item:any) => sum +(item.price * item.quantity),intialValue);
+     return a;
+}
+     
+
+
+
   cart:CartItem[]=[];
+  updateToCart(cart:CartItem){
+    console.log(this.quantity)
+
+    this.carts.id=cart.id;
+   // this.carts.title=cart.title;
+   // this.carts.productCode=cart.productCode;
+   // this.carts.brand=cart.brand;
+   // this.carts.soldBy=cart.soldBy;
+   this.carts.totalPrice=(cart.price * this.quantity);
+   // this.carts.price=(cart.price * this.quantity);
+  //  this.carts.originalPrice=cart.originalPrice;
+  //  this.carts.offerPercent=cart.offerPercent;
+  //  this.carts.size=cart.size;
+    this.carts.quantity=this.quantity;
+   // this.carts.description=cart.description;
+  //  this.carts.imgSrc=cart.imgSrc;
+    this.cartsvc.updateCart(this.carts).subscribe(
+      ()=>console.log("update successfully")
+ 
+    
+      
+    )
+ 
+    this.ngOnInit();
+  }
   delete(deleteItem:CartItem){
    // this.service.deleteUser(id).subscribe(
    //   ()=> console.log(`Employee with Id = ${this.employee.id}deleted`),
