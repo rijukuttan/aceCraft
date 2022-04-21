@@ -1,7 +1,7 @@
 {
   "hosting": {
-    "public": "dist/acecraft",
-    "site":"acecraft-b2b70",
+    "public": "dist/ace-craft",
+    "site":"acecraft-76e70",
     "ignore": [
       "firebase.json",
       "**/.*",

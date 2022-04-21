@@ -12,6 +12,7 @@ import { ShippingComponent } from './components/contact/Help/shipping/shipping.c
 import { ViewProductComponent } from './components/products/view-product/view-product.component';
 import { CartItemsComponent } from './components/products/cart-items/cart-items.component';
 import { AuthGuard } from './services/auth.guard';
+import { EnterprisesComponent } from './components/enterprises/enterprises.component';
 const routes: Routes = [
   {path:'',redirectTo:'./Home',pathMatch:'full'},
   {path:'',component:HomeComponent},
@@ -25,7 +26,8 @@ const routes: Routes = [
   {path:'payment',component:PaymentComponent},
   {path:'shipping',component:ShippingComponent},
   {path:"viewProduct/:id",component:ViewProductComponent},
-  {path:"cartItem",component:CartItemsComponent}
+  {path:"cartItem",component:CartItemsComponent},
+  {path:"enterprise",component:EnterprisesComponent}
 
   
 ];

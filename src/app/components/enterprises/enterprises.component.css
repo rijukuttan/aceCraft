@@ -1,0 +1,137 @@
+.main-display-image {
+    background-size: cover;
+    /* background-image: url(http://cdn.storehippo.com/s/5997cc7…/ms.files/Enterprises-1.jpg); */
+    background-position: center 120px;
+    background-attachment: fixed;
+    min-height: 100vh;
+}
+.h-0{
+    height: 0px;
+}
+.gutter-0 {
+    --bs-gutter-x: 0 !important;
+}
+
+.image-bg-text {
+    width: 100%;
+    left: 0;
+    font-size: 30px;
+    bottom: 125px;
+    font-family: "proxima-bold";
+    position: absolute;
+    text-align: center;
+    line-height: 1;
+    color: #978f8f;
+}
+
+.bg-grey {
+    background-color: #dadada;
+}
+
+
+.second-block {
+    padding-top: 50px;
+    color: black;
+    font-weight: 600;
+}
+
+.image-card {
+    display: flex;
+    margin-top: 5%;
+}
+
+.image-container {
+    background-position: center;
+    color: #978f8f;
+    height: 300px;
+    max-width: 300px;
+    padding: 10px;
+    transition: all 0.3s ease;
+    background-size: inherit;
+    display: flex;
+    text-align: center;
+    border-radius: 12px;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 15px;
+    line-height: 1.428571429;
+    font-family: proxima-Thin;
+    margin: 0;
+    transition: transform .2s;
+}
+
+.image-container:hover {
+    transform: scale(.8);
+}
+
+.design {
+    background-image: url(../../../assets/images/Enterprises-3.png);
+}
+
+.size {
+    background-image: url(../../../assets/images/Enterprises-2.png);
+}
+
+.team {
+    background-image: url(../../../assets/images/Enterprises-4.png);
+}
+
+.third-block {
+    color: #978f8f;
+    background-color: black;
+}
+
+.flex-display {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon img {
+    width: 70%;
+    margin: auto;
+}
+
+.display-center {
+    display: flex;
+    justify-content: center;
+}
+
+.fourth-block {
+    background-size: cover;
+    background-image: url('../../../assets/images/bottom-block.png');
+    background-position: top;
+    min-height: 655px;
+    background-repeat: no-repeat;
+    background-color: black;
+}
+
+.fifth-block {
+    background-size: cover;
+    background-image: url('../../../assets/images/bottom-block.png');
+    background-position: top;
+    min-height: 655px;
+    background-repeat: no-repeat;
+    background-color: black;
+}
+
+.center-block {
+    padding: 20px;
+    background: #000000;
+    border-radius: 5px;
+    color: white;
+    position: absolute;
+    left: calc(50vw - 125px);
+    box-shadow: 0px 9px 18px #0000007d;
+    top: 305%;
+    z-index: 200;
+}
+
+@media (min-width: 1025px) {
+
+    .second-block,
+    .third-block {
+        height: auto;
+        overflow: hidden;
+    }
+}
