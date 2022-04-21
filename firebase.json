@@ -1,0 +1,17 @@
+{
+  "hosting": {
+    "public": "dist/acecraft",
+    "site":"acecraft-b2b70",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
+}

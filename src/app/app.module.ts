@@ -25,7 +25,7 @@ import { ShippingComponent } from './components/contact/Help/shipping/shipping.c
 import { CartItemsComponent } from './components/products/cart-items/cart-items.component';
 import { CounterComponent } from './components/products/counter/counter.component';
 import { CounterchildComponent } from './components/products/counter/counterchild/counterchild.component';
-
+import { FlashMessagesModule } from 'flash-messages-angular';
 @NgModule({
   declarations: [
     AppComponent,
@@ -55,7 +55,8 @@ import { CounterchildComponent } from './components/products/counter/counterchil
     BrowserAnimationsModule,
     ReactiveFormsModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    FlashMessagesModule.forRoot(),
    
    
   ],

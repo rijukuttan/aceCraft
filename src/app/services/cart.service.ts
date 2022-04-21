@@ -2,27 +2,29 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { find, Observable, Subject } from 'rxjs';
 import { CartItem } from '../models/cartItem';
-
+import{environment} from './../../environments/environment'
 @Injectable({
   providedIn: 'root'
 })
 export class CartService {
 url:string=""
+carturl=environment.cartapi;
   constructor(private http:HttpClient) {
-    this.url = "http://localhost:3000/cartItem/";
+    this.url = this.carturl+"/";
+   
    }
 
  // cartItem:CartItem[]=[]
 addToCart(product:CartItem){
  // this.cartItem.push(product)
  
-  this.http.post<CartItem>('http://localhost:3000/cartItem', product).subscribe(data => {
+  this.http.post<CartItem>(this.carturl, product).subscribe(data => {
     alert("item added to cart Successfull");
     console.log(product)
 })
 }
 getCartItems(){
-  return this.http.get<CartItem[]>('http://localhost:3000/cartItem');
+  return this.http.get<CartItem[]>(this.carturl);
 }
 
   removeItemFromCart(item:any){

@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-register',
@@ -10,6 +11,7 @@ import { Router } from '@angular/router';
 })
 export class RegisterComponent implements OnInit {
   //public registerForm!:FormGroup;
+  userurl=environment.userapi;
   registerForm= new FormGroup({
     Studentfirstname:new FormControl(''),
     studentlastname:new FormControl(''),
@@ -41,7 +43,7 @@ export class RegisterComponent implements OnInit {
       return ;
   }
    
-    this.http.post<any>("http://localhost:3000/signupUser",this.registerForm.value)
+    this.http.post<any>(this.userurl,this.registerForm.value)
     .subscribe(res=>{
       alert("signUp Successfull");
       this.registerForm.reset();

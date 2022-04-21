@@ -3,8 +3,8 @@ import { error } from '@angular/compiler/src/util';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { environment } from 'src/environments/environment';
 import { UserService } from 'src/app/services/user.service';
-
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -12,11 +12,11 @@ import { UserService } from 'src/app/services/user.service';
 })
 export class LoginComponent implements OnInit {
 public loginForm!:FormGroup
+userapi=environment.userapi;
 submitted = false;
 get f() { return this.loginForm.controls; }
   constructor(private formBuilder:FormBuilder,private http:HttpClient,private router:Router,
     private userService: UserService) { }
-
   ngOnInit(): void {
     this.userService.validateAuth(false);
     this.loginForm = this.formBuilder.group({
@@ -29,7 +29,7 @@ get f() { return this.loginForm.controls; }
     if (this.loginForm.invalid) {
       return ;
     }
-    this.http.get<any>("http://localhost:3000/signupUser")
+    this.http.get<any>(this.userapi)
     .subscribe(res=>{
       const user=res.find((a:any)=>{
         return a.email === this.loginForm.value.email && a.password=== this.loginForm.value.password
@@ -40,10 +40,9 @@ get f() { return this.loginForm.controls; }
         this.router.navigate(['Home'])
         this.userService.validateAuth(true);
       }else{
-        alert("user not found !!");
+        alert("user not found !!");       
         this.userService.validateAuth(false);
       }
     })
   }
-
 }

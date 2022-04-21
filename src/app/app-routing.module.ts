@@ -11,14 +11,15 @@ import { PaymentComponent } from './components/contact/Help/payment/payment.comp
 import { ShippingComponent } from './components/contact/Help/shipping/shipping.component';
 import { ViewProductComponent } from './components/products/view-product/view-product.component';
 import { CartItemsComponent } from './components/products/cart-items/cart-items.component';
+import { AuthGuard } from './services/auth.guard';
 const routes: Routes = [
   {path:'',redirectTo:'./Home',pathMatch:'full'},
   {path:'',component:HomeComponent},
   {path:'Home',component:HomeComponent},
   {path:'login',component:LoginComponent},
   {path:'register',component:RegisterComponent},
-  {path:'contact',component:ContactComponent},
-  {path:'product',component:ProductsComponent},
+  {path:'contact',component:ContactComponent,canActivate: [AuthGuard]},
+  {path:'product',component:ProductsComponent,canActivate: [AuthGuard]},
   {path:'accountsOrders',component:AccountsOrdersComponent},
   {path:'others',component:OthersComponent},
   {path:'payment',component:PaymentComponent},

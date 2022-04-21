@@ -387,13 +387,13 @@
       "price": 500,
       "originalPrice": 825,
       "offerPercent": 39,
-      "quantity": 4,
+      "quantity": 2,
       "size": "30",
       "description": [
         "Made from Poly-cotton. Henley neckline. Short sleeves."
       ],
       "imgSrc": "https://d2pyicwmjx3wii.cloudfront.net/s/5997cc7c4d6e8ffa20e50aae/601d6ffdbb47db6b5e246674/webp/middle-school-480x480.jpg",
-      "totalPrice": 2000
+      "totalPrice": 1000
     },
     {
       "id": 4,
@@ -409,7 +409,8 @@
       "description": [
         ""
       ],
-      "imgSrc": "https://d2pyicwmjx3wii.cloudfront.net/s/5997cc7c4d6e8ffa20e50aae/ms.products/5aa0f798f04705ab2ca347bb/images/5aa0f798f04705ab2ca347bc/5aa0f79ff04705ab2ca347d7/webp/5aa0f79ff04705ab2ca347d7-480x480.jpg"
+      "imgSrc": "https://d2pyicwmjx3wii.cloudfront.net/s/5997cc7c4d6e8ffa20e50aae/ms.products/5aa0f798f04705ab2ca347bb/images/5aa0f798f04705ab2ca347bc/5aa0f79ff04705ab2ca347d7/webp/5aa0f79ff04705ab2ca347d7-480x480.jpg",
+      "totalPrice": 710
     },
     {
       "id": 7,
