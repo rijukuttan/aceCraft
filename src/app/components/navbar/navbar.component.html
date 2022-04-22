@@ -52,27 +52,24 @@
       </ul>
       <ul class=" navbar-nav my-2 my-lg-0">
         <li class="nav-item">
-            <a class="menu-button "  mat-button style="font-size:24px;color:white" type="button"
+            <a class="menu-button "  mat-button style="font-size:20px;color:white" type="button"
              data-toggle="collapse" data-target="#collapseExample1" 
              aria-controls="collapseExample1" aria-expanded="false" >
                 <span class="fa fa-gear" ></span>
         </a>
         </li>
-        <li class="nav-item ">
-          <button routerLink='cartItem' mat-button class="menu-button">      
-            <span class= "fa fa-cart-plus" style="font-size:24px;color:white"></span>
-          </button>
-          
+        <li class="nav-item ">      
+          <button mat-button routerLink='cartItem'
+          matBadge="{{cartCount}}" matBadgePosition="after" color="gray" ngModel>
+          <span class= "fa fa-cart-plus" style="font-size:20px;color:white"></span>
+      </button>         
         </li>
         <li class="nav-item " *ngIf="auth">
           <button routerLink='login' mat-button class="menu-button">      
             <span>LOGOUT</span>
-          </button>
-          
+          </button>          
         </li>
-      </ul>
-  
-    
+      </ul>    
     </div>
   
   </nav>

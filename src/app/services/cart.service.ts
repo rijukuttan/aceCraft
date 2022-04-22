@@ -13,6 +13,11 @@ carturl=environment.cartapi;
     this.url = this.carturl+"/";
    
    }
+  //  public countSubject = new Subject<number>();
+  // validateAuth(data:number) {
+  //   //passing the data as the next observable
+  //   this.countSubject.next(data);
+  // }
 
  // cartItem:CartItem[]=[]
 addToCart(product:CartItem){
@@ -54,6 +59,45 @@ getCartItems(){
   emptyCart(){
 
   }
- 
+  public countSubject = new Subject<number>();
+
+  // var c= this.countSubject.subscribe(
+  //   data => 
+  //   {
+  //     console.log('next subscribed value: ' + data);
+  //     this.isAuthenticated = data;
+  //   })
+
+// We subscribe to the subject
+// countSubject.subscribe((data) => {
+//   console.log("Subscriber got data >>>>> "+ data);
+// });
+
+// // We use the subject to emit data
+// countSubject.next("Eureka");
+
+  // getCount(){
+  //   return this.http.get<CartItem[]>(this.carturl).subscribe(res=>{
+   
+      
+  //     // We use the subject to emit data
+  //     this.countSubject.next(res.length);
+  //     console.log(res.length+"inside sub")
+  //    //const user=res.length
+   
+  //   })
+  // }
   
+  getCount(){
+    return this.getCartItems().subscribe(res=>{
+   
+      
+      // We use the subject to emit data
+      this.countSubject.next(res.length);
+      console.log(this.countSubject+"inside sub")
+     //const user=res.length
+   
+    })
+  }
+
 }

@@ -27,6 +27,7 @@ import { CounterComponent } from './components/products/counter/counter.componen
 import { CounterchildComponent } from './components/products/counter/counterchild/counterchild.component';
 import { FlashMessagesModule } from 'flash-messages-angular';
 import { EnterprisesComponent } from './components/enterprises/enterprises.component';
+import {MatBadgeModule} from '@angular/material/badge';
 @NgModule({
   declarations: [
     AppComponent,
@@ -58,6 +59,7 @@ import { EnterprisesComponent } from './components/enterprises/enterprises.compo
     ReactiveFormsModule,
     FormsModule,
     HttpClientModule,
+    MatBadgeModule,
     FlashMessagesModule.forRoot(),
    
    

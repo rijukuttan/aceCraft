@@ -22,14 +22,19 @@ export class AuthGuard implements CanActivate {
       //     this.isAuthenticated = data;
       //   }
       // );
-      var isAuthenticateds= this.authService.getAuthStatus();
+       var isAuthenticated= this.authService.authSubject.subscribe(
+        data => 
+        {
+          console.log('next subscribed value: ' + data);
+          this.isAuthenticated = data;
+        })
  
-      if (isAuthenticateds) {
-        console.log('inside false ' + isAuthenticateds);
+      if ( this.isAuthenticated==false) {
+        console.log('inside false ' + this.isAuthenticated);
           this.router.navigate(['/login']);
           return false;
       }else {
-        console.log('next subscribed value:t3etg ' + isAuthenticateds);
+        console.log('next subscribed value:t3etg ' + this.isAuthenticated);
         //this.router.navigate(['/Home']);
         return true;
       }

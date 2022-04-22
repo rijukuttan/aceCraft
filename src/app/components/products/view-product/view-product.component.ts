@@ -7,7 +7,7 @@ import { CartItem } from 'src/app/models/cartItem';
 import { Products } from 'src/app/models/products';
 import { CartService } from 'src/app/services/cart.service';
 import { ProductsService } from 'src/app/services/products.service';
-
+import { Output, EventEmitter } from '@angular/core';
 @Component({
   selector: 'app-view-product',
   templateUrl: './view-product.component.html',
@@ -36,8 +36,15 @@ export class ViewProductComponent implements OnInit {
       description: [],
       imgSrc: ''
     }
+    //sent cart count
+    // @Output() cartCountEvent = new EventEmitter<number>();
+
+    // cartCount(value: number) {
+    //   this.cartCountEvent.emit(value);
+    // }
 sizes :number=0
 quantity:number=0
+//count:number=0//cart
 
     addToCart(product:any){
       this.cart.title=product.title;
@@ -55,6 +62,16 @@ quantity:number=0
       this.cart.id=product.id;
       this.cartsvc.addToCart(this.cart);
       console.log(product.id);
+      this.cartsvc.getCount();
+      //get cart count
+      // this.cartsvc.getCartItems().subscribe (     
+      //   (response) =>
+      //    {        
+      //     this.count=response.length;
+      //      console.log(this.count);
+      //    }
+      //  )
+      //  this.cartCount(this.count);
     }
    
 
