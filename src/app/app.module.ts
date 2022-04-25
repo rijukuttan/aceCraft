@@ -28,6 +28,21 @@ import { CounterchildComponent } from './components/products/counter/counterchil
 import { FlashMessagesModule } from 'flash-messages-angular';
 import { EnterprisesComponent } from './components/enterprises/enterprises.component';
 import {MatBadgeModule} from '@angular/material/badge';
+import { NotesComponent } from './components/notes/notes.component';
+import { ActingComponent } from './components/BlogDescriptions/acting/acting.component';
+import { BodytypesWomensComponent } from './components/BlogDescriptions/bodytypes-womens/bodytypes-womens.component';
+import { ClassiclooksHimComponent } from './components/BlogDescriptions/classiclooks-him/classiclooks-him.component';
+import { CollegelookComponent } from './components/BlogDescriptions/collegelook/collegelook.component';
+import { CorporatetocupcakesComponent } from './components/BlogDescriptions/corporatetocupcakes/corporatetocupcakes.component';
+import { DressingtosucceedComponent } from './components/BlogDescriptions/dressingtosucceed/dressingtosucceed.component';
+import { RightwayComponent } from './components/BlogDescriptions/rightway/rightway.component';
+import { SelectingComponent } from './components/BlogDescriptions/selecting/selecting.component';
+import { ActingstylingAccessoriesComponent } from './components/BlogDescriptions/styling-accessories/styling-accessories.component';
+import { TheAcecraftDifferenceComponent } from './components/BlogDescriptions/the-acecraft-difference/the-acecraft-difference.component';
+import { TipsforgreateoutfitComponent } from './components/BlogDescriptions/tipsforgreateoutfit/tipsforgreateoutfit.component';
+import { WorkWearForAllSeasonsComponent } from './components/BlogDescriptions/work-wear-for-all-seasons/work-wear-for-all-seasons.component';
+import { CommentFormComponent } from './components/BlogDescriptions/comment-form/comment-form.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -48,7 +63,23 @@ import {MatBadgeModule} from '@angular/material/badge';
     CartItemsComponent,
     CounterComponent,
     CounterchildComponent,
-    EnterprisesComponent
+    EnterprisesComponent,
+    NotesComponent,
+    ActingComponent,
+    BodytypesWomensComponent,
+    ClassiclooksHimComponent,
+    CollegelookComponent,
+    CorporatetocupcakesComponent,
+    DressingtosucceedComponent,
+    RightwayComponent,
+    SelectingComponent,
+    ActingstylingAccessoriesComponent,
+    TheAcecraftDifferenceComponent,
+    TipsforgreateoutfitComponent,
+    WorkWearForAllSeasonsComponent,
+    CommentFormComponent,
+  
+ 
   ],
   imports: [
     BrowserModule,

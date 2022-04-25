@@ -13,6 +13,18 @@ import { ViewProductComponent } from './components/products/view-product/view-pr
 import { CartItemsComponent } from './components/products/cart-items/cart-items.component';
 import { AuthGuard } from './services/auth.guard';
 import { EnterprisesComponent } from './components/enterprises/enterprises.component';
+import { NotesComponent } from './components/notes/notes.component';
+import { ActingComponent } from './components/BlogDescriptions/acting/acting.component';
+import { BodytypesWomensComponent } from './components/BlogDescriptions/bodytypes-womens/bodytypes-womens.component';
+import { ClassiclooksHimComponent } from './components/BlogDescriptions/classiclooks-him/classiclooks-him.component';
+import { CollegelookComponent } from './components/BlogDescriptions/collegelook/collegelook.component';
+import { CorporatetocupcakesComponent } from './components/BlogDescriptions/corporatetocupcakes/corporatetocupcakes.component';
+import { DressingtosucceedComponent } from './components/BlogDescriptions/dressingtosucceed/dressingtosucceed.component';
+import { RightwayComponent } from './components/BlogDescriptions/rightway/rightway.component';
+import { SelectingComponent } from './components/BlogDescriptions/selecting/selecting.component';
+import { TheAcecraftDifferenceComponent } from './components/BlogDescriptions/the-acecraft-difference/the-acecraft-difference.component';
+import { TipsforgreateoutfitComponent } from './components/BlogDescriptions/tipsforgreateoutfit/tipsforgreateoutfit.component';
+import { WorkWearForAllSeasonsComponent } from './components/BlogDescriptions/work-wear-for-all-seasons/work-wear-for-all-seasons.component';
 const routes: Routes = [
   {path:'',redirectTo:'./Home',pathMatch:'full'},
   {path:'',component:HomeComponent},
@@ -27,7 +39,20 @@ const routes: Routes = [
   {path:'shipping',component:ShippingComponent},
   {path:"viewProduct/:id",component:ViewProductComponent},
   {path:"cartItem",component:CartItemsComponent},
-  {path:"enterprise",component:EnterprisesComponent}
+  {path:"enterprise",component:EnterprisesComponent},
+  {path:"notes",component:NotesComponent},
+  {path:"ACING",component:ActingComponent},
+  {path:"bodytypeswomens",component:BodytypesWomensComponent},
+  {path:"classiclookhim",component:ClassiclooksHimComponent},
+  {path:"collegelook",component:CollegelookComponent},
+  {path:"corporatetocupcakes",component:CorporatetocupcakesComponent},
+  {path:"dressingtosucceed",component:DressingtosucceedComponent},
+  {path:"rightway",component:RightwayComponent},
+  {path:"selecting",component:SelectingComponent},
+ // {path:"styling",component:styling},
+ {path:"theacecraftdifference",component:TheAcecraftDifferenceComponent},
+ {path:"tipsforgreateoutfit",component:TipsforgreateoutfitComponent},
+ {path:"workwearforallseason",component:WorkWearForAllSeasonsComponent},
 
   
 ];

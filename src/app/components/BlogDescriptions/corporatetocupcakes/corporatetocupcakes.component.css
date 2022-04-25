@@ -1,0 +1,10 @@
+.blockalign{
+    word-wrap: break-word;
+    max-width: 800px;
+    margin: auto;
+    font-size: 14px !important;
+    color: black;
+}
+.container-fluid{
+    background-color: white;
+}

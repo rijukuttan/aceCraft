@@ -1,0 +1,41 @@
+.heading {
+    text-align: center;
+    font-size: 39px;
+    color: black;
+    height: 0px;
+    margin-top: 25px;
+    margin-bottom:5px;
+    margin-bottom: 15px;
+}
+
+.contentclass {
+    top: 40px;
+    left:250px;
+    height: auto;
+    width: 70%;
+    position: relative;
+    
+}
+.container-fluid{
+    background-color: white;
+}
+
+.boxstyle {
+    color: white;
+    background-color: black;
+    height: 300px;
+     width: 100%;
+    align-items: center;
+    padding: 50px;
+    padding-top: 119px;
+    padding-left: 95px;
+    margin-top: 20px;
+    margin-left: 0%;
+    border-bottom: 50px solid white;
+    border-top: 5PX solid white;
+    border-left: 5PX solid white;
+    border-right: 5px solid white;
+    font-size: 12px;
+    margin-bottom: 40px;
+    box-shadow: 2px 2px 7px 0px rgb(186 186 186);
+}
