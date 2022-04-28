@@ -23,6 +23,20 @@ export class RegisterComponent implements OnInit {
   })
 
   submitted = false;
+  ConfirmedValidator(controlName: string, matchingControlName: string){
+    return (formGroup: FormGroup) => {
+        const control = formGroup.controls[controlName];
+        const matchingControl = formGroup.controls[matchingControlName];
+        if (matchingControl.errors && !matchingControl.errors?.['confirmedValidator']) {
+            return;
+        }
+        if (control.value !== matchingControl.value) {
+            matchingControl.setErrors({ confirmedValidator: true });
+        } else {
+            matchingControl.setErrors(null);
+        }
+    }
+}
   constructor(private formBuilder:FormBuilder,private http:HttpClient,private router:Router) { }
 
   ngOnInit(): void {
@@ -30,16 +44,22 @@ export class RegisterComponent implements OnInit {
       Studentfirstname: ['', Validators.required],
       studentlastname: ['', Validators.required],
       email: ['', [Validators.required, Validators.email,Validators.pattern('^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$')]],
-      password: ['', [Validators.required, Validators.minLength(6)]],
-      confirmpassword: ['', Validators.required],
+      password: ['', [Validators.required, Validators.minLength(6),Validators.pattern('^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9]).{6,}$')]],
+      confirmpassword: ['', Validators.required,Validators.minLength(6),Validators.pattern('^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9]).{6,}$')],
       parentname:['', Validators.required],
       admissionnumber:['', Validators.required]
-        });
+        },
+         
+      { 
+        validator:this. ConfirmedValidator('password', 'confirmpassword')
+      }
+      );
   }
   get f() { return this.registerForm.controls; }
   submitHandler(){
     this.submitted = true;
     if (this.registerForm.invalid) {
+      alert("signUp failed");
       return ;
   }
    

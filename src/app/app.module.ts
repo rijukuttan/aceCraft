@@ -42,7 +42,8 @@ import { TheAcecraftDifferenceComponent } from './components/BlogDescriptions/th
 import { TipsforgreateoutfitComponent } from './components/BlogDescriptions/tipsforgreateoutfit/tipsforgreateoutfit.component';
 import { WorkWearForAllSeasonsComponent } from './components/BlogDescriptions/work-wear-for-all-seasons/work-wear-for-all-seasons.component';
 import { CommentFormComponent } from './components/BlogDescriptions/comment-form/comment-form.component';
-
+import {CarouselModule} from 'primeng/carousel';
+import { GetintouchComponent } from './components/enterprises/getintouch/getintouch.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -78,6 +79,7 @@ import { CommentFormComponent } from './components/BlogDescriptions/comment-form
     TipsforgreateoutfitComponent,
     WorkWearForAllSeasonsComponent,
     CommentFormComponent,
+    GetintouchComponent
   
  
   ],
@@ -92,6 +94,7 @@ import { CommentFormComponent } from './components/BlogDescriptions/comment-form
     HttpClientModule,
     MatBadgeModule,
     FlashMessagesModule.forRoot(),
+    CarouselModule
    
    
   ],

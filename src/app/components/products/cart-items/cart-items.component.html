@@ -48,5 +48,31 @@
     <div ><h2>{{totalPrice(cart)}}</h2></div>
   </div>
 </div>
- 
+<hr>
+<div class="container">
+  <div style="background-color:whitesmoke;padding: 1%;margin-top: 2%;">
+      <span>Related Products</span>
+  </div>
+  <div class="mt-3">
+      <p-carousel [value]="products" [numVisible]="4" [numScroll]="4" [responsiveOptions]="responsiveOptions">
+          <ng-template pTemplate="header">
+          </ng-template>
+          <ng-template let-product pTemplate="item">
+              <div class="product-item" [routerLink]="['/viewProduct',product.id]">
+                  <div class="product-item-content">
+                      <div class="mb-3">
+                          <img [src]="product.imgSrc" style="width: 200px;height: 200px;" [alt]="product.name"
+                              class="product-image" />
+                      </div>
+                      <div>
+                          <a [routerLink]="['/viewProduct',product.id]" style="text-decoration: none;color: black;" routerLinkActive="router-link-active"  class="mb-1 h5">{{product.title}}</a>
+                          <h6 class="mt-0 mb-3">${{product.price}}</h6>
+                      </div>
+                  </div>
+              </div>
+          </ng-template>
+      </p-carousel>
+  </div>
+</div>
+
 </div>

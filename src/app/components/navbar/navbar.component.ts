@@ -14,6 +14,16 @@ export class NavbarComponent implements OnInit {
   constructor(private authService:UserService,private cartSvc:CartService,private http: HttpClient,) {
     
    }
+   getCartCount(){
+    this.cartSvc.getCartItems().subscribe (     
+        (response) =>
+         {        
+          this.cartCount=response.length;
+          console.log(this.cartCount);
+         }
+       )
+     return this.cartCount;
+   }
   // c= this.cartSvc.countSubject.subscribe((data) => {
   //   this.cartCount=data;
   //   console.log("Subscriber got data >>>>> "+ this.cartCount);
@@ -28,19 +38,20 @@ cartCount: number=0;
         this.auth = data;
       }
     );
-    this.cartSvc.getCartItems().subscribe (     
-      (response) =>
-       {        
-        this.cartCount=response.length;
-        console.log(this.cartCount);
-       }
-     ) 
-    this.cartSvc.countSubject.subscribe (     
-      (response) =>
-       {        
-        this.cartCount=response;
-        console.log(this.cartCount);
-       }
-     ) 
+    this.getCartCount();
+    // this.cartSvc.getCartItems().subscribe (     
+    //   (response) =>
+    //    {        
+    //     this.cartCount=response.length;
+    //     console.log(this.cartCount);
+    //    }
+    //  ) 
+    // this.cartSvc.countSubject.subscribe (     
+    //   (response) =>
+    //    {        
+    //     this.cartCount=response;
+    //     console.log(this.cartCount);
+    //    }
+    //  ) 
   }
 }

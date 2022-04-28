@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { CartItem } from 'src/app/models/cartItem';
 import { Products } from 'src/app/models/products';
 import { CartService } from 'src/app/services/cart.service';
+import { ProductsService } from 'src/app/services/products.service';
 
 @Component({
   selector: 'app-cart-items',
@@ -12,7 +13,8 @@ import { CartService } from 'src/app/services/cart.service';
 export class CartItemsComponent implements OnInit {
   quanties:number=0;
 
-  constructor(private cartSvc:CartService,private http: HttpClient,private cartsvc:CartService) { }
+  constructor(private cartSvc:CartService,private http: HttpClient,
+    private cartsvc:CartService,private productsvc:ProductsService) { }
   //cartList:any[] =[];
   carts:CartItem={
     id:0,
@@ -100,6 +102,8 @@ totalPrice(data:any) {
    );
    this.ngOnInit();
   }
+  products:any[] =[];
+  responsiveOptions:any;
   ngOnInit(): void {
 
     
@@ -115,6 +119,37 @@ totalPrice(data:any) {
      console.log(this.cart);
    }
  )
+ //carosel
+ this.productsvc.getProducts().subscribe(
+  (response) =>
+  {
+    this.products = response
+  },
+
+  (error) =>
+  {
+    console.log("Error Occured: "+error );
+
+  }
+
+)
+ this.responsiveOptions = [
+  {
+      breakpoint: '1024px',
+      numVisible: 3,
+      numScroll: 3
+  },
+  {
+      breakpoint: '768px',
+      numVisible: 2,
+      numScroll: 2
+  },
+  {
+      breakpoint: '560px',
+      numVisible: 1,
+      numScroll: 1
+  }
+];
   }
 
 
