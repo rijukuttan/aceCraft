@@ -7,6 +7,7 @@ import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms'
   styleUrls: ['./getintouch.component.css']
 })
 export class GetintouchComponent implements OnInit {
+  orderFrom: FormGroup;
 
   constructor(private formbuilder:FormBuilder) {
     this.orderFrom=formbuilder.group({
@@ -20,19 +21,19 @@ export class GetintouchComponent implements OnInit {
    }
    get f(){return this.orderFrom.controls;}
 
-   orderFrom=new FormGroup({
-    FirstName: new FormControl(''),
-    LastName:new FormControl(''),
-    ProfissionalEmail:new FormControl(''),
-    Organisation:new FormControl(''),
-    Phone:new FormControl('')
-  })
-
+  //  orderFrom=new FormGroup({
+  //   FirstName: new FormControl(''),
+  //   LastName:new FormControl(''),
+  //   ProfissionalEmail:new FormControl(''),
+  //   Organisation:new FormControl(''),
+  //   Phone:new FormControl('')
+  // })
   ngOnInit(): void {
   }
+
   submitHandler(){
     console.log(this.orderFrom.value)
-    alert("Product added sucessfully..")
+    alert("Product added sucessfully..");
   }
 
 }

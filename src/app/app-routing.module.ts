@@ -25,6 +25,8 @@ import { SelectingComponent } from './components/BlogDescriptions/selecting/sele
 import { TheAcecraftDifferenceComponent } from './components/BlogDescriptions/the-acecraft-difference/the-acecraft-difference.component';
 import { TipsforgreateoutfitComponent } from './components/BlogDescriptions/tipsforgreateoutfit/tipsforgreateoutfit.component';
 import { WorkWearForAllSeasonsComponent } from './components/BlogDescriptions/work-wear-for-all-seasons/work-wear-for-all-seasons.component';
+import { SchoolComponent } from './components/school/school.component';
+import { School1Component } from './components/school1/school1.component';
 const routes: Routes = [
   {path:'',redirectTo:'./Home',pathMatch:'full'},
   {path:'',component:HomeComponent},
@@ -33,13 +35,13 @@ const routes: Routes = [
   {path:'register',component:RegisterComponent},
   {path:'contact',component:ContactComponent,canActivate: [AuthGuard]},
  // {path:'product',component:ProductsComponent,canActivate: [AuthGuard]},
-  {path:'product',component:ProductsComponent},
+  {path:'product',component:ProductsComponent,canActivate: [AuthGuard]},
   {path:'accountsOrders',component:AccountsOrdersComponent},
   {path:'others',component:OthersComponent},
   {path:'payment',component:PaymentComponent},
   {path:'shipping',component:ShippingComponent},
   {path:"viewProduct/:id",component:ViewProductComponent},
-  {path:"cartItem",component:CartItemsComponent},
+  {path:"cartItem",component:CartItemsComponent,canActivate: [AuthGuard]},
   {path:"enterprise",component:EnterprisesComponent},
   {path:"notes",component:NotesComponent},
   {path:"ACING",component:ActingComponent},
@@ -54,8 +56,8 @@ const routes: Routes = [
  {path:"theacecraftdifference",component:TheAcecraftDifferenceComponent},
  {path:"tipsforgreateoutfit",component:TipsforgreateoutfitComponent},
  {path:"workwearforallseason",component:WorkWearForAllSeasonsComponent},
-
-  
+ {path:"school",component:SchoolComponent},
+ {path:"school1",component:School1Component}
 ];
 
 @NgModule({

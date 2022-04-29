@@ -15,14 +15,14 @@ export class NavbarComponent implements OnInit {
     
    }
    getCartCount(){
-    this.cartSvc.getCartItems().subscribe (     
-        (response) =>
-         {        
-          this.cartCount=response.length;
-          console.log(this.cartCount);
-         }
-       )
-     return this.cartCount;
+    // this.cartSvc.getCartItems().subscribe (     
+    //     (response) =>
+    //      {        
+    //       this.cartCount=response.length;
+    //       console.log(this.cartCount);
+    //      }
+    //    )
+    //  return this.cartCount;
    }
   // c= this.cartSvc.countSubject.subscribe((data) => {
   //   this.cartCount=data;

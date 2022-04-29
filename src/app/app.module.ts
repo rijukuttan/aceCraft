@@ -44,6 +44,9 @@ import { WorkWearForAllSeasonsComponent } from './components/BlogDescriptions/wo
 import { CommentFormComponent } from './components/BlogDescriptions/comment-form/comment-form.component';
 import {CarouselModule} from 'primeng/carousel';
 import { GetintouchComponent } from './components/enterprises/getintouch/getintouch.component';
+import { SchoolComponent } from './components/school/school.component';
+import { School1Component } from './components/school1/school1.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -79,7 +82,10 @@ import { GetintouchComponent } from './components/enterprises/getintouch/getinto
     TipsforgreateoutfitComponent,
     WorkWearForAllSeasonsComponent,
     CommentFormComponent,
-    GetintouchComponent
+    GetintouchComponent,
+    SchoolComponent,
+    School1Component
+    
   
  
   ],

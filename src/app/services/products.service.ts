@@ -9,24 +9,24 @@ import { environment } from './../../environments/environment'
   providedIn: 'root'
 })
 export class ProductsService {
-hosturl=environment.herokuapi;
-producturl=environment.productapi;
-constructor(private http:HttpClient) { }
+  hosturl = environment.herokuapi;
+  producturl = environment.productapi;
+  constructor(private http: HttpClient) { }
 
-// url:string = "https://evening-reaches-02350.herokuapp.com/Products";
-// url2:string = "https://evening-reaches-02350.herokuapp.com/";
+  // url:string = "https://evening-reaches-02350.herokuapp.com/Products";
+  // url2:string = "https://evening-reaches-02350.herokuapp.com/";
 
-getProducts(){
+  getProducts() {
 
-  return this.http.get<Products[]>(this.producturl);
-}
+    return this.http.get<Products[]>(this.producturl);
+  }
 
-getProductsById(id: number){
-  return this.http.get<Products>(this.producturl+'?id='+id);
-}
-getProductsByIds(id: any){
-  return this.http.get<Products[]>(this.producturl+'?id='+id);
-}
+  getProductsById(id: number) {
+    return this.http.get<Products>(this.producturl + '?id=' + id);
+  }
+  getProductsByIds(id: any) {
+    return this.http.get<Products[]>(this.producturl + '?id=' + id);
+  }
 
 }
 

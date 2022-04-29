@@ -10,6 +10,6 @@
  -->
 <!-- <img class="card-img" src="{{products.imgSrc}}" (click)="viewProduct(products.id)">-->
 <a [routerLink]="['/viewProduct',products.id]">
-  <img class="card-img" src="{{products.imgSrc}}" >
+  <img class="card-img" src="{{products.imgSrc}}">
 </a>
- <h6 class="card-title">{{products.title}}</h6>
+<h6 class="card-title">{{products.brand}}<br>{{products.title|uppercase}}<br>{{products.price|currency:"INR"}}</h6>

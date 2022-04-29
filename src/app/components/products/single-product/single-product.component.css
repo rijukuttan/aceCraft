@@ -1,19 +1,18 @@
-.card
-{
+.card {
   border: none;
   padding: 10px;
   margin-top: 20px;
 }
 
-.container{
+.container {
   border: 1px solid;
 }
 
-.card-img{
+.card-img {
   height: 376px;
 }
 
-.card-title{
+.card-title {
   text-align: center;
   margin-top: 10px;
 }
