@@ -1,0 +1,160 @@
+.logo {
+    padding-left: 42%;
+
+}
+
+.sl1 {
+    color: red;
+}
+
+.school {
+    background-image: url('http://cdn.storehippo.com/s/5997cc7c4d6e8ffa20e50aae/ms.files/home4.jpg');
+    height: 200px;
+    width: 100%;
+
+}
+
+.logos {
+    width: 60px;
+    height: 60px;
+}
+
+.schlogo {
+    list-style: none;
+    margin-left: 28%;
+
+}
+
+.schlogo li {
+
+    float: left;
+    margin-left: 30px;
+}
+
+.Schoollogo {
+    width: 100%;
+    height: 100px;
+}
+
+.section1 {
+    background-image: url(http://cdn.storehippo.com/s/5997cc7c4d6e8ffa20e50aae/ms.files/Home-1.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    height: 500px;
+}
+
+.section1 h1 {
+    padding-top: 15%;
+    margin-left: 25%;
+    font-size: 50px;
+    color: #EDEDED;
+}
+
+.section2 {
+    height: 700px;
+    background-color: black;
+}
+
+.section2 p {
+    color: gray;
+    font-size: 30px;
+    font-size: 40px;
+    padding-top: 18%;
+    text-align: center;
+}
+
+.section3 {
+    height: 1200px;
+    background-image: url('http://cdn.storehippo.com/s/5997cc7c4d6e8ffa20e50aae/ms.files/home3.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position-y: 30%;
+}
+
+.section3 p {
+    color: #DDDDDD;
+    font-size: 50px;
+    text-align: center;
+    padding-top: 15%;
+}
+
+.section3 h3 {
+    color: #DDDDDD;
+    text-align: center;
+    padding-top: 25%;
+    font-size: 50px;
+}
+
+.section4 {
+    height: 2500px;
+    background-color: #000000;
+}
+
+.section4 h1 {
+    text-align: right;
+    font-weight: bold;
+    padding-top: 15%;
+    padding-right: 10%;
+    color: #BBBBBB;
+}
+
+.section4 p {
+    text-align: right;
+    padding-top: 2%;
+    padding-right: 10%;
+    font-size: 25px;
+    color: #BBBBBB;
+}
+
+.banner1 {
+    height: 1900px;
+    padding-left: 8%;
+}
+
+.banner {
+    width: 90%;
+}
+
+.section5 {
+    height: 600px;
+    background-image: url('https://img.freepik.com/free-photo/office-desk-with-black-notepad-pen-black-background-top-view-with-copy-space-business-goals-objectives-concept_94046-6021.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+
+.btn1 {
+    background-color: transparent;
+    color: white;
+    border-color: white;
+    width: 10%;
+    height: 30px;
+}
+
+.footer{
+    padding-top: 15%;
+}
+
+.footer h5 {
+    text-align: center;
+    font-size: 24px;
+    color: white;
+}
+.footer h6 {
+    text-align: center;
+    font-size: 24px;
+    color: white;
+}
+.footer p {
+    text-align: center;
+    font-size: 24px;
+    color: white;
+}
+
+.footer2 {
+
+    color: white;
+    margin-top: 5%;
+    text-align: center;
+}

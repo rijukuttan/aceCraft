@@ -1,20 +1,17 @@
 <div>
     <div>
-    <hr class="authdecarator">
-    <div class="authdecarator">
-        <div>
-            <h3 id="count">{{count}}<span>Comment</span></h3>
+        <hr class="authdecarator">
+        <div class="authdecarator">
+            <div>
+                <h3 id="count">{{count}}<span>Comment</span></h3>
+            </div>
         </div>
-    </div>
-
-    <hr class="authdecarator">
-
-    <h3 class="authdecarator">Leave a Comment</h3>
+        <hr class="authdecarator">
+        <h3 class="authdecarator">Leave a Comment</h3>
     </div>
     <!-- <form class="authdecarator">
         <br>
         <label>Name</label>
-
         <div>
             <div>
                 <input class="form-control" type="text" name="username" id="name" placeholder="Name"
@@ -23,12 +20,8 @@
             </div>
         </div>
         <div>
-
         </div>
-
-
         <label>Email</label>
-
         <div>
             <div class="col-md-7">
                 <input class="form-control" type="email" name="email2" placeholder="Email" required>
@@ -36,9 +29,7 @@
                     Invalid Email</span>
             </div>
         </div>
-
         <label>Message</label>
-
         <div class="row ms-mb-m ">
             <div class="col-md-7">
                 <textarea name="password" class="form-control" rows="3" id="comment"
@@ -51,30 +42,32 @@
                 Comment
             </button>
         </p>
-
     </form> -->
-
     <form [formGroup]="submitForm" (ngSubmit)="submitHandler()" class="authdecarator">
         <div class="form-group" class="authdecarator">
             <label for="Name" class="form-label">Name</label>
             <input type="text" id="Name" name="Name" class="form-control" formControlName="Name" placeholder="Name">
-            <div  *ngIf="f['Name'].invalid && f['Name'].touched">
-                <div *ngIf="f['Name'].errors && f['Name'].errors['required']" class="alert alert-danger"style="width:60%">*Please enter Name</div>
+            <div *ngIf="f['Name'].invalid && f['Name'].touched">
+                <div *ngIf="f['Name'].errors && f['Name'].errors['required']" class="alert alert-danger"
+                    style="width:60%">*Please enter Name</div>
             </div>
         </div>
         <div class="form-group" class="authdecarator">
             <label for="Email" class="form-label">Email</label>
             <input type="text" id="Email" name="Email" class="form-control" formControlName="Email" placeholder="Email">
             <div *ngIf="f['Email'].invalid && f['Email'].touched">
-                <div *ngIf="f['Email'].errors && f['Email'].errors['required']" class="alert alert-danger" style="width:60%">*Email is required</div>
+                <div *ngIf="f['Email'].errors && f['Email'].errors['required']" class="alert alert-danger"
+                    style="width:60%">*Email is required</div>
             </div>
         </div>
-        <div class="form-group"class="authdecarator">
+        <div class="form-group" class="authdecarator">
             <label for="Email" class="form-label">Message</label>
-            <textarea rows="3" id="Message" name="Message" class="form-control" formControlName="Message" placeholder="Your comment"></textarea>
+            <textarea rows="3" id="Message" name="Message" class="form-control" formControlName="Message"
+                placeholder="Your comment"></textarea>
         </div>
         <div>
-        <button class="btn btn-primary btnclass" [disabled]="!submitForm.valid" class="submit" style="width:100%">Post Comment</button>
+            <button class="btn btn-primary btnclass" [disabled]="!submitForm.valid" class="submit"
+                style="width:100%">Post Comment</button>
         </div>
     </form>
 </div>

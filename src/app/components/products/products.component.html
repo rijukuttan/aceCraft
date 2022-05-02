@@ -1,6 +1,5 @@
 <!-- <div class="container">
   <div class="row">
-
   </div>
   <div class="row">
     <ng-container *ngFor="let item of products">
@@ -12,7 +11,7 @@
   </div>
 </div> -->
 <div class="container-fluid" style="background-color:white">
-  <div class="container" >
+  <!-- <div class="container" >
   <div class="row"  style="margin:10%;padding:2%; border: 20px; border-color: blue;"  >
    
     <div class="col-3">
@@ -41,14 +40,10 @@
             <label class="form-check-label" for="fiveToTen">5 - 10</label>
           </div>
   </div>
-</div>
-<div class="container" >
-
- 
-  
+</div>-->
+  <div class="container">
     <div class="row">
       <div class="col-9">
-  
       </div>
       <div class="col-3" style="float: right;">
         <select (change)='onOptionsSelected($event)'>
@@ -61,10 +56,9 @@
       </div>
     </div>
     <div class="row">
-        <div class="card col-4" *ngFor="let item of productsList| sort:[sortParam,sortDirection]">
-          <app-single-product [products]="item"> </app-single-product>
-        </div>
+      <div class="card col-4" *ngFor="let item of productsList| sort:[sortParam,sortDirection]">
+        <app-single-product [products]="item"> </app-single-product>
+      </div>
     </div>
-  
   </div>
 </div>

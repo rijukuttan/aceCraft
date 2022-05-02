@@ -1,78 +1,71 @@
-
 <div class="container-fluid">
   <h1>Your bag total is {{totalPrice(cart)|currency:'INR':'symbol':'3.0'}}</h1>
-
-<hr>
+  <hr>
   <div class="container-fluid" *ngFor="let item of cart">
- 
     <div class="row">
-        <div class="col-sm">
-          <img src={{item.imgSrc}}>
-        </div>
-        
-          <div class="col-sm">
-            <h3> {{item.title}}</h3>
-            <h6>{{item.size}}</h6>
-            </div>
-            <div class="col-sm">
-              <app-counterchild [counterValue]="item.quantity" (quantityEmitter)="receivequantity($event)"
-                (click)="updateToCart(item)" ></app-counterchild>
-            
-           <!-- <input type="number"  [(ngModel)]="item.quantity"  (click)="updateToCart(item,quanties)" name="quantity" class="quantity">-->  
-            </div>
-            <div class="col-sm">
-              <div>{{item.totalPrice}}</div>
-            
-                <button class="btn btn-dark m-3" (click)="delete(item)">delete</button>
-              </div>
-              
-        
-      
+      <div class="col-sm">
+        <img src={{item.imgSrc}}>
       </div>
-    <hr>
+      <div class="col-sm">
+        <h3> PRODUCT:{{item.title}}</h3>
+        <h3>SIZE:{{item.size}}</h3>
+      </div>
+      <div class="col-sm">
+        <app-counterchild [counterValue]="item.quantity" (quantityEmitter)="receivequantity($event)"
+          (click)="updateToCart(item)"></app-counterchild>
+        <!-- <input type="number"  [(ngModel)]="item.quantity"  (click)="updateToCart(item,quanties)" name="quantity" class="quantity">-->
+      </div>
+      <div class="col-sm">
+        <div>{{item.totalPrice}}</div>
 
-</div>
-<hr>
-<div class="row">
-  <div class="col-lg-4">
-
-  </div>
-  <div class="col-lg-4">
-    <div>
-      sub Total
+        <button class="btn btn-dark m-3" (click)="delete(item)">delete</button>
+      </div>
     </div>
-    <div>Total</div>
+    <hr>
   </div>
-  <div class="col-lg-4">
-    <div>{{totalPrice(cart)}}</div>
-    <div ><h2>{{totalPrice(cart)}}</h2></div>
-  </div>
-</div>
-<hr>
-<div class="container">
-  <div style="background-color:whitesmoke;padding: 1%;margin-top: 2%;">
-      <span>Related Products</span>
-  </div>
-  <div class="mt-3">
-      <p-carousel [value]="products" [numVisible]="4" [numScroll]="4" [responsiveOptions]="responsiveOptions">
-          <ng-template pTemplate="header">
-          </ng-template>
-          <ng-template let-product pTemplate="item">
-              <div class="product-item" [routerLink]="['/viewProduct',product.id]">
-                  <div class="product-item-content">
-                      <div class="mb-3">
-                          <img [src]="product.imgSrc" style="width: 200px;height: 200px;" [alt]="product.name"
-                              class="product-image" />
-                      </div>
-                      <div>
-                          <a [routerLink]="['/viewProduct',product.id]" style="text-decoration: none;color: black;" routerLinkActive="router-link-active"  class="mb-1 h5">{{product.title}}</a>
-                          <h6 class="mt-0 mb-3">${{product.price}}</h6>
-                      </div>
-                  </div>
-              </div>
-          </ng-template>
-      </p-carousel>
-  </div>
-</div>
+  <hr>
+  <div class="row">
+    <div class="col-lg-4">
 
+    </div>
+    <div class="col-lg-4">
+      <div>
+        sub Total
+      </div>
+      <div>Total</div>
+    </div>
+    <div class="col-lg-4">
+      <div>{{totalPrice(cart)}}</div>
+      <div>
+        <h2>{{totalPrice(cart)}}</h2>
+      </div>
+    </div>
+  </div>
+  <hr>
+  <div class="container">
+    <div style="background-color:whitesmoke;padding: 1%;margin-top: 2%;">
+      <span>Related Products</span>
+    </div>
+    <div class="mt-3">
+      <p-carousel [value]="products" [numVisible]="4" [numScroll]="4" [responsiveOptions]="responsiveOptions">
+        <ng-template pTemplate="header">
+        </ng-template>
+        <ng-template let-product pTemplate="item">
+          <div class="product-item" [routerLink]="['/viewProduct',product.id]">
+            <div class="product-item-content">
+              <div class="mb-3">
+                <img [src]="product.imgSrc" style="width: 200px;height: 200px;" [alt]="product.name"
+                  class="product-image" />
+              </div>
+              <div>
+                <a [routerLink]="['/viewProduct',product.id]" style="text-decoration: none;color: black;"
+                  routerLinkActive="router-link-active" class="mb-1 h5">{{product.title}}</a>
+                <h6 class="mt-0 mb-3">${{product.price}}</h6>
+              </div>
+            </div>
+          </div>
+        </ng-template>
+      </p-carousel>
+    </div>
+  </div>
 </div>

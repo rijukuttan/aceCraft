@@ -1,16 +1,10 @@
 /* Sidebar */
-
- 
- ul {
+ul {
   list-style-type: none;
- }
- .line{
-    border-left: 3px solid #bbb;
-    height: 15px;
-    
-    margin: 10px 5px 0 5px;
-    
-   
-  }
+}
+.line {
+  border-left: 3px solid #bbb;
+  height: 15px;
 
-
+  margin: 10px 5px 0 5px;
+}
