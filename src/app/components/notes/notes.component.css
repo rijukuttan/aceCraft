@@ -4,19 +4,20 @@
     color: black;
     height: 0px;
     margin-top: 25px;
-    margin-bottom:5px;
+    margin-bottom: 5px;
     margin-bottom: 15px;
 }
 
 .contentclass {
     top: 40px;
-    left:250px;
+    left: 250px;
     height: auto;
     width: 70%;
     position: relative;
-    
+
 }
-.container-fluid{
+
+.container-fluid {
     background-color: white;
 }
 
@@ -24,7 +25,7 @@
     color: white;
     background-color: black;
     height: 300px;
-     width: 100%;
+    width: 100%;
     align-items: center;
     padding: 50px;
     padding-top: 119px;

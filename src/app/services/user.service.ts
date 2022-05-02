@@ -6,18 +6,17 @@ import { environment } from './../../environments/environment'
 })
 export class UserService {
   public authSubject = new Subject<boolean>();
-  validateAuth(data:boolean) {
+  validateAuth(data: boolean) {
     //passing the data as the next observable
     this.authSubject.next(data);
   }
-  hosturl=environment.herokuapi;
-  value?:boolean;
-    getAuthStatus(){
+  hosturl = environment.herokuapi;
+  value?: boolean;
+  getAuthStatus() {
     this.authSubject.subscribe(
-      data => 
-      {
+      data => {
         console.log('inside user service: ' + data);
-        this.value= data;
+        this.value = data;
         console.log('inside user service 11: ' + this.value);
       }
     );

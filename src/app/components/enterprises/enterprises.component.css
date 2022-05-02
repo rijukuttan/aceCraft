@@ -5,9 +5,11 @@
     background-attachment: fixed;
     min-height: 100vh;
 }
-.h-0{
+
+.h-0 {
     height: 0px;
 }
+
 .gutter-0 {
     --bs-gutter-x: 0 !important;
 }

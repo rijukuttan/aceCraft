@@ -41,19 +41,27 @@ export class RegisterComponent implements OnInit {
 
   ngOnInit(): void {
     this.registerForm = this.formBuilder.group({
-      Studentfirstname: ['', Validators.required],
-      studentlastname: ['', Validators.required],
-      email: ['', [Validators.required, Validators.email,Validators.pattern('^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$')]],
+      Studentfirstname: ['', [Validators.required,Validators.minLength(3),Validators.pattern("^(?=[a-zA-Z._]{3,20}$)(?!.*[_.]{2})[^_.].*[^_.]$")]],
+      studentlastname: ['', [Validators.required,Validators.minLength(3),Validators.pattern("^(?=[a-zA-Z._]{3,20}$)(?!.*[_.]{2})[^_.].*[^_.]$")]],
+      email: ['', [Validators.required,Validators.pattern('^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$')]],
       password: ['', [Validators.required, Validators.minLength(6),Validators.pattern('^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9]).{6,}$')]],
+<<<<<<< HEAD
       confirmpassword: ['', Validators.required,Validators.minLength(6),Validators.pattern('^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9]).{6,}$')],
       parentname:['', [Validators.required,Validators.minLength(3),Validators.pattern("^(?=[a-zA-Z._]{3,20}$)(?!.*[_.]{2})[^_.].*[^_.]$")]],
       admissionnumber:['', Validators.required]
         },
          
+=======
+      confirmpassword: ['', Validators.required],
+      parentname:['', [Validators.required,Validators.minLength(3),Validators.pattern("^(?=[a-zA-Z._]{3,20}$)(?!.*[_.]{2})[^_.].*[^_.]$")]],
+      admissionnumber:['', Validators.required],
+      acceptTerms: [false, Validators.requiredTrue]
+     }, 
+>>>>>>> 65a5bad07e11263debc72cdce89672d7e8d20014
       { 
         validator:this. ConfirmedValidator('password', 'confirmpassword')
       }
-      );
+     );
   }
   get f() { return this.registerForm.controls; }
   submitHandler(){

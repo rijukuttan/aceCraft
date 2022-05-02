@@ -25,6 +25,8 @@ import { SelectingComponent } from './components/BlogDescriptions/selecting/sele
 import { TheAcecraftDifferenceComponent } from './components/BlogDescriptions/the-acecraft-difference/the-acecraft-difference.component';
 import { TipsforgreateoutfitComponent } from './components/BlogDescriptions/tipsforgreateoutfit/tipsforgreateoutfit.component';
 import { WorkWearForAllSeasonsComponent } from './components/BlogDescriptions/work-wear-for-all-seasons/work-wear-for-all-seasons.component';
+import { SchoolComponent } from './components/school/school.component';
+import { School1Component } from './components/school1/school1.component';
 const routes: Routes = [
   {path:'',redirectTo:'./Home',pathMatch:'full'},
   {path:'',component:HomeComponent},
@@ -54,8 +56,8 @@ const routes: Routes = [
  {path:"theacecraftdifference",component:TheAcecraftDifferenceComponent},
  {path:"tipsforgreateoutfit",component:TipsforgreateoutfitComponent},
  {path:"workwearforallseason",component:WorkWearForAllSeasonsComponent},
-
-  
+ {path:"school",component:SchoolComponent},
+ {path:"school1",component:School1Component}
 ];
 
 @NgModule({

@@ -45,7 +45,6 @@ export class ViewProductComponent implements OnInit {
 sizes :number=0
 quantity:number=0
 //count:number=0//cart
-
     addToCart(product:any){
       this.cart.title=product.title;
       this.cart.productCode=product.productCode;
@@ -73,9 +72,6 @@ quantity:number=0
       //  )
       //  this.cartCount(this.count);
     }
-   
-
-
      productData:Products={
        title: '',
        productCode: '',
@@ -89,26 +85,18 @@ quantity:number=0
        description: [],
        imgSrc: ''
      }
-
     productDatas:any;
     //products:Products[]=[];
-    products:any;
-    
+    products:any;   
   ngOnInit() {
-    this.route.params.subscribe(params=>{
+    this.route.params.subscribe((params: { [x: string]: number; })=>{
       this.productId=params['id']
-
-  
     })
     this.productService.getProductsById(this.productId).subscribe(products=>{
       this.productDatas=products as Products
     })
-    
-
+   
   /*  this.productId = this.actRoute.snapshot.params['id'];
-
- 
-
      this.productService.getProductsById(this.productId).subscribe(
        (response) =>
        {
@@ -118,8 +106,6 @@ quantity:number=0
        }
      )*/
   }
-
-
   }
 
 
