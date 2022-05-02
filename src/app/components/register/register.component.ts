@@ -48,7 +48,8 @@ export class RegisterComponent implements OnInit {
 <<<<<<< HEAD
       confirmpassword: ['', Validators.required,Validators.minLength(6),Validators.pattern('^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9]).{6,}$')],
       parentname:['', [Validators.required,Validators.minLength(3),Validators.pattern("^(?=[a-zA-Z._]{3,20}$)(?!.*[_.]{2})[^_.].*[^_.]$")]],
-      admissionnumber:['', Validators.required]
+      admissionnumber:['', Validators.required], 
+      acceptTerms: [false, Validators.requiredTrue]
         },
          
 =======
